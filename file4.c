@@ -32,14 +32,14 @@ void pchar(stack_t **stack, unsigned int line_number)
  */
 void pstr(stack_t **stack, unsigned int line_number)
 {
-	stack_t *current = *stack;
+	stack_t *cur = *stack;
 
 	(void)line_number;
 
-	while (current != NULL && current->n != 0 && (current->n >= 0 && current->n <= 127))
+	while (cur != NULL && cur->n != 0 && (cur->n >= 0 && cur->n <= 127))
 	{
-		putchar(current->n);
-		current = current->next;
+		putchar(cur->n);
+		cur = cur->next;
 	}
 
 	putchar('\n');
